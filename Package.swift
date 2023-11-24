@@ -21,7 +21,10 @@ let package = Package(
             name: "MetUIFeature"),
         .target(
             name: "LoadingView",
-            dependencies: ["Lottie"]),
+            dependencies: ["lottie-spm"],
+            resources: [
+                .process("Resources/loading.json")
+            ]),
         .testTarget(
             name: "MetUIFeatureTests",
             dependencies: ["MetUIFeature"]),
