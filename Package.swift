@@ -21,7 +21,7 @@ let package = Package(
             name: "MetUIFeature"),
         .target(
             name: "LoadingView",
-            dependencies: ["lottie-spm"],
+            dependencies: ["Lottie"],
             resources: [
                 .process("Resources/loading.json")
             ]),
