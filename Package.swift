@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "UIFeature",
+    name: "MetUIFeature",
     products: [
         .library(
             name: "MetUIFeature",
@@ -21,7 +21,9 @@ let package = Package(
             name: "MetUIFeature"),
         .target(
             name: "LoadingView",
-            dependencies: ["lottie-spm"],
+            dependencies: [
+                .product(name: "Lottie", package: "lottie-spm")
+                          ],
             resources: [
                 .process("Resources/loading.json")
             ]),
