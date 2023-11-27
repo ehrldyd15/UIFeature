@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Lottie
 
-public class LoadingView: UIView {
+public final class LoadingView: UIView {
     
     public let shared = LoadingView()
     
