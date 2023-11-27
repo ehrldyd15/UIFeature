@@ -25,8 +25,8 @@ let package = Package(
                 .product(name: "Lottie", package: "lottie-spm")
             ],
             resources: [
-//                .process("Resources/loading.json")
-                .copy("Resources/loading.json")
+                .process("Resources/loading.json")
+//                .copy("Resources/loading.json")
             ]),
         .testTarget(
             name: "MetUIFeatureTests",
