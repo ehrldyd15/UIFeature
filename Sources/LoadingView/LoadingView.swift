@@ -34,7 +34,7 @@ public final class LoadingView: UIView {
         
 //        let view = LottieAnimationView(filePath: path ?? "")
         
-        let path = Bundle.main.path(forResource: "loading", ofType: "json")
+        let path = Bundle.main.path(forResource: "loading", ofType: "json", inDirectory: "Resources")
         let view = LottieAnimationView(filePath: path ?? "")
         
         view.backgroundColor = .yellow
