@@ -8,10 +8,12 @@ let package = Package(
     products: [
         .library(
             name: "MetUIFeature",
-            targets: ["MetUIFeature"]),
+            targets: ["MetUIFeature"]
+        ),
         .library(
             name: "LoadingView",
-            targets: ["LoadingView"]),
+            targets: ["LoadingView"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/airbnb/lottie-spm.git", from: "4.3.3"),

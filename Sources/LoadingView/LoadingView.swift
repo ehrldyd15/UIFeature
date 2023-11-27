@@ -29,6 +29,7 @@ public final class LoadingView: UIView {
         
         let view = LottieAnimationView(name: "loading")
 
+        
         view.frame.size.width = 200
         view.frame.size.height = 100
         view.loopMode = .loop
