@@ -11,7 +11,7 @@ import Lottie
 
 public final class LoadingView: UIView {
     
-    public let shared = LoadingView()
+    public static let shared = LoadingView()
     
     private let contentView: UIView = {
         let view = UIView()
