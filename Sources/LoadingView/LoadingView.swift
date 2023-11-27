@@ -29,6 +29,11 @@ public final class LoadingView: UIView {
         
         let view = LottieAnimationView(name: "loading")
 
+//        let bundle = Bundle.moduleBundle(for: LoadingView.self)
+//        let path = Bundle.main()bundle?.path(forResource: "loading", ofType: "json")
+        
+//        let view = LottieAnimationView(filePath: path ?? "")
+        
         view.backgroundColor = .yellow
         view.frame.size.width = 200
         view.frame.size.height = 100
@@ -76,6 +81,10 @@ public final class LoadingView: UIView {
     }
     
 }
+
+//extension Bundle {
+//    public static let myPackageNameBundleIdentifier = Bundle.module.bundleIdentifier!
+//}
 
 extension Bundle {
     

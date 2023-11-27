@@ -26,8 +26,10 @@ let package = Package(
             dependencies: [
                 .product(name: "Lottie", package: "lottie-spm")
             ],
+//            resources: [
+//                .process("Resources/loading.json")
             resources: [
-                .process("Resources/loading.json")
+                .process("Resources")
 //                .copy("Resources/loading.json")
             ]),
         .testTarget(
