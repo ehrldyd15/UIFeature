@@ -25,7 +25,7 @@ let package = Package(
                 .product(name: "Lottie", package: "lottie-spm")
             ],
             resources: [
-                .process("Resources")
+                .process("Resources/loading.json")
 //                .copy("Resources")
             ]),
         .testTarget(
