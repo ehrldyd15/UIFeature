@@ -16,28 +16,18 @@ public final class LoadingView: UIView {
     private let contentView: UIView = {
         let view = UIView()
 
-        view.backgroundColor = .clear
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
         
         return view
     }()
     
     private let loadingView: LottieAnimationView = {
-//        let bundle = Bundle.moduleBundle(for: LoadingView.self)
-//        let path = bundle?.path(forResource: "loading", ofType: "json")
-//        
-//        let view = LottieAnimationView(filePath: path ?? "")
+        // 기본적으로 해당 Package의 bundle을 외부에 공개하여, 외부에서 리소스에 접근하도록 할 수 있다.
+        // 각 리소스들은 bundle의 path or url 을 통해 리소스에 직접 접근하도록 할 수 있는데,
+        // jsonFile.json는 path로 외부에 공개하여, 리소스에 직접 접근할 수 있도록 하였다.
+        let path = Bundle.module.path(forResource: "loading", ofType: "json")
+        let view = LottieAnimationView(filePath: path ?? "")
         
-//        let view = LottieAnimationView(name: "loading")
-
-//        let bundle = Bundle.moduleBundle(for: LoadingView.self)
-//        let path = Bundle.main()bundle?.path(forResource: "loading", ofType: "json")
-        
-//        let view = LottieAnimationView(filePath: path ?? "")
-        
-//        let path = Bundle.main.path(forResource: "loading", ofType: "json", inDirectory: "Resources")
-        let view = LottieAnimationView(filePath: SharedResource.jsonPath ?? "")
-        
-        view.backgroundColor = .yellow
         view.frame.size.width = 200
         view.frame.size.height = 100
         view.loopMode = .loop
@@ -84,25 +74,3 @@ public final class LoadingView: UIView {
     }
     
 }
-
-public enum SharedResource {
-    static public let bundle: Bundle = Bundle.module
-    static public let jsonPath: String? = Bundle.module.path(forResource: "loading", ofType: "json")
-}
-
-//extension Bundle {
-//    public static let myPackageNameBundleIdentifier = Bundle.module.bundleIdentifier!
-//}
-
-//extension Bundle {
-//    
-//    public static func moduleBundle(for object: AnyObject) -> Bundle! {
-//        Bundle.moduleBundle(forObject: object)
-//    }
-//
-//    public static func moduleBundle(forObject: AnyObject) -> Bundle {
-//        Bundle(for: type(of: forObject))
-//    }
-//    
-//}
-
