@@ -22,12 +22,12 @@ public final class LoadingView: UIView {
     }()
     
     private let loadingView: LottieAnimationView = {
-//        let bundle = Bundle.moduleBundle(for: LoadingView.self)
-//        let path = bundle?.path(forResource: "loading", ofType: "json")
-//        
-//        let view = LottieAnimationView(filePath: path ?? "")
+        let bundle = Bundle.moduleBundle(for: LoadingView.self)
+        let path = bundle?.path(forResource: "loading", ofType: "json")
         
-        let view = LottieAnimationView(name: "loading")
+        let view = LottieAnimationView(filePath: path ?? "")
+        
+//        let view = LottieAnimationView(name: "loading")
 
 //        let bundle = Bundle.moduleBundle(for: LoadingView.self)
 //        let path = Bundle.main()bundle?.path(forResource: "loading", ofType: "json")
