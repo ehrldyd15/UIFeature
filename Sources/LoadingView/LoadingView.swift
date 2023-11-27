@@ -22,10 +22,10 @@ public final class LoadingView: UIView {
     }()
     
     private let loadingView: LottieAnimationView = {
-        let bundle = Bundle.moduleBundle(for: LoadingView.self)
-        let path = bundle?.path(forResource: "loading", ofType: "json")
-        
-        let view = LottieAnimationView(filePath: path ?? "")
+//        let bundle = Bundle.moduleBundle(for: LoadingView.self)
+//        let path = bundle?.path(forResource: "loading", ofType: "json")
+//        
+//        let view = LottieAnimationView(filePath: path ?? "")
         
 //        let view = LottieAnimationView(name: "loading")
 
@@ -33,6 +33,9 @@ public final class LoadingView: UIView {
 //        let path = Bundle.main()bundle?.path(forResource: "loading", ofType: "json")
         
 //        let view = LottieAnimationView(filePath: path ?? "")
+        
+        let path = Bundle.main.path(forResource: "loading", ofType: "json")
+        let view = LottieAnimationView(filePath: path ?? "")
         
         view.backgroundColor = .yellow
         view.frame.size.width = 200
@@ -86,15 +89,15 @@ public final class LoadingView: UIView {
 //    public static let myPackageNameBundleIdentifier = Bundle.module.bundleIdentifier!
 //}
 
-extension Bundle {
-    
-    public static func moduleBundle(for object: AnyObject) -> Bundle! {
-        Bundle.moduleBundle(forObject: object)
-    }
-
-    public static func moduleBundle(forObject: AnyObject) -> Bundle {
-        Bundle(for: type(of: forObject))
-    }
-    
-}
+//extension Bundle {
+//    
+//    public static func moduleBundle(for object: AnyObject) -> Bundle! {
+//        Bundle.moduleBundle(forObject: object)
+//    }
+//
+//    public static func moduleBundle(forObject: AnyObject) -> Bundle {
+//        Bundle(for: type(of: forObject))
+//    }
+//    
+//}
 
