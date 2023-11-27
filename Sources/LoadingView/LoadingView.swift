@@ -29,7 +29,7 @@ public final class LoadingView: UIView {
         
         let view = LottieAnimationView(name: "loading")
 
-        
+        view.backgroundColor = .yellow
         view.frame.size.width = 200
         view.frame.size.height = 100
         view.loopMode = .loop
@@ -42,6 +42,7 @@ public final class LoadingView: UIView {
         
         self.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
         self.contentView.frame = self.frame
+        self.contentView.backgroundColor = .gray
         
         self.addSubview(self.contentView)
 
