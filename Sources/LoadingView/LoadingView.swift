@@ -25,7 +25,19 @@ public class LoadingView: UIView {
 //        
 //        let view = LottieAnimationView(filePath: path ?? "")
         
-        let view = LottieAnimationView(name: "loading")
+//        Bundle.module.url(forResource: "config", withExtension: "json")
+        
+//        var view = UIView()
+        var path = ""
+        
+        if let bundle = Bundle(identifier: Bundle.myPackageNameBundleIdentifier) {
+            let url = bundle.url(forResource: "loading", withExtension: "json")
+            // ...
+//            view = LottieAnimationView(filePath: url?.absoluteString ?? "")
+            path = url?.absoluteString ?? ""
+        }
+        
+        let view = LottieAnimationView(filePath: path)
 
         view.frame.size.width = 200
         view.frame.size.height = 100
@@ -73,14 +85,18 @@ public class LoadingView: UIView {
     
 }
 
-extension Bundle {
-    
-    public static func moduleBundle(for object: AnyObject) -> Bundle! {
-        Bundle.moduleBundle(forObject: object)
-    }
+//extension Bundle {
+//    
+//    public static func moduleBundle(for object: AnyObject) -> Bundle! {
+//        Bundle.moduleBundle(forObject: object)
+//    }
+//
+//    public static func moduleBundle(forObject: AnyObject) -> Bundle {
+//        Bundle(for: type(of: forObject))
+//    }
+//    
+//}
 
-    public static func moduleBundle(forObject: AnyObject) -> Bundle {
-        Bundle(for: type(of: forObject))
-    }
-    
+extension Bundle {
+    public static let myPackageNameBundleIdentifier = Bundle.main.bundleIdentifier!
 }
