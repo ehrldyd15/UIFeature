@@ -34,8 +34,8 @@ public final class LoadingView: UIView {
         
 //        let view = LottieAnimationView(filePath: path ?? "")
         
-        let path = Bundle.main.path(forResource: "loading", ofType: "json", inDirectory: "Resources")
-        let view = LottieAnimationView(filePath: path ?? "")
+//        let path = Bundle.main.path(forResource: "loading", ofType: "json", inDirectory: "Resources")
+        let view = LottieAnimationView(filePath: SharedResource.jsonPath ?? "")
         
         view.backgroundColor = .yellow
         view.frame.size.width = 200
@@ -83,6 +83,11 @@ public final class LoadingView: UIView {
         }
     }
     
+}
+
+public enum SharedResource {
+    static public let bundle: Bundle = Bundle.module
+    static public let jsonPath: String? = Bundle.module.path(forResource: "loading", ofType: "json")
 }
 
 //extension Bundle {
