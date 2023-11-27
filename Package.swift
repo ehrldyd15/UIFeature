@@ -29,7 +29,7 @@ let package = Package(
 //            resources: [
 //                .process("Resources/loading.json")
             resources: [
-                .process("Resources")
+                .process("Resources/loading.json")
 //                .copy("Resources/loading.json")
             ]),
         .testTarget(
